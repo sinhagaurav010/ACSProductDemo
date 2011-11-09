@@ -12,6 +12,7 @@
 		1C889237144C5ABE00CC9D2C /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C889231144C5ABE00CC9D2C /* EGOImageLoadConnection.m */; };
 		1C889238144C5ABE00CC9D2C /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C889232144C5ABE00CC9D2C /* EGOImageButton.m */; };
 		1C889239144C5ABE00CC9D2C /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C889234144C5ABE00CC9D2C /* EGOImageView.m */; };
+		1C8BF2AD146AB506006310B7 /* ACSData.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1C8BF2AC146AB506006310B7 /* ACSData.xml */; };
 		1CC55ADE14652DF100F1012B /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC55AC814652DF100F1012B /* Facebook.m */; };
 		1CC55ADF14652DF100F1012B /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CC55ACA14652DF100F1012B /* FBDialog.bundle */; };
 		1CC55AE014652DF100F1012B /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC55ACC14652DF100F1012B /* FBDialog.m */; };
@@ -155,6 +156,7 @@
 		1C889232144C5ABE00CC9D2C /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
 		1C889233144C5ABE00CC9D2C /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
 		1C889234144C5ABE00CC9D2C /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
+		1C8BF2AC146AB506006310B7 /* ACSData.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ACSData.xml; sourceTree = "<group>"; };
 		1CC55AC614652DF100F1012B /* facebook_ios_sdk_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facebook_ios_sdk_Prefix.pch; sourceTree = "<group>"; };
 		1CC55AC714652DF100F1012B /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		1CC55AC814652DF100F1012B /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
@@ -365,6 +367,14 @@
 			name = EGOImageView;
 			sourceTree = "<group>";
 		};
+		1C8BF2AF146AB51A006310B7 /* XMLFile */ = {
+			isa = PBXGroup;
+			children = (
+				1C8BF2AC146AB506006310B7 /* ACSData.xml */,
+			);
+			name = XMLFile;
+			sourceTree = "<group>";
+		};
 		1CC55AEA14652DFA00F1012B /* FBConnect */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +435,7 @@
 		5D208126143E287F00D6B481 = {
 			isa = PBXGroup;
 			children = (
+				1C8BF2AF146AB51A006310B7 /* XMLFile */,
 				5D912C1F14673A58000BFEA4 /* FaceBook */,
 				1CC55AEF14652EA800F1012B /* FBLoginButton */,
 				1CC55AEA14652DFA00F1012B /* FBConnect */,
@@ -922,6 +933,7 @@
 				1CC55ADF14652DF100F1012B /* FBDialog.bundle in Resources */,
 				5D912C1E14673A43000BFEA4 /* LogoutNormal.png in Resources */,
 				5D912C2114673AE6000BFEA4 /* LoginNormal.png in Resources */,
+				1C8BF2AD146AB506006310B7 /* ACSData.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
