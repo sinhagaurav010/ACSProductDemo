@@ -557,7 +557,6 @@
  * Called when the user has logged in successfully.
  */
 - (void)fbDidLogin {
-    
     NSLog(@"fbLogin");
     _fbButton.isLoggedIn = YES;
     [_fbButton updateImage];

@@ -16,5 +16,6 @@
    IBOutlet UITabBarController *tabBarController;
     ModalController *modal;
 }
+-(void)parsingFunction:(NSData *)dataForParse;
 
 @end

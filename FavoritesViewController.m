@@ -131,7 +131,7 @@ if(isSaveToFav == 1)
         cell.distanceLabel.text = [NSString stringWithFormat:@"%0.3fKm",[ModalController  calDistancebetWithLat:LATSOURCE with:LONGSOURCE with:[[[arrayFavrites objectAtIndex:indexPath.row ]objectForKey:@"Lat"]doubleValue] with:[[[arrayFavrites objectAtIndex:indexPath.row ]objectForKey:@"Long"]doubleValue]]];
         
         cell.imageMain.backgroundColor = [UIColor clearColor];
-        cell.imageMain.imageURL = [NSURL URLWithString:[[[[arrayFavrites objectAtIndex:indexPath.row]objectForKey:FIELDIMAGES]objectForKey:FIELDIMAGE]objectAtIndex:0]] ;
+        cell.imageMain.image  = [UIImage imageNamed:@"placeholder.jpg"] ;
 	}
 	   
     return (UITableViewCell *)cell;

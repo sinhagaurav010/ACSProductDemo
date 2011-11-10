@@ -116,7 +116,8 @@
         cell.dealLabel.text = [[arrayNearBy objectAtIndex:indexPath.row] objectForKey:FIELDDEAL];
         cell.distanceLabel.text = [NSString stringWithFormat:@"%.3fKm",[ModalController  calDistancebetWithLat:[locationUser.strUserLat doubleValue] with:[locationUser.strUserLong doubleValue] with:[[[arrayNearBy objectAtIndex:indexPath.row ]objectForKey:@"Lat"]doubleValue] with:[[[arrayNearBy objectAtIndex:indexPath.row ]objectForKey:@"Long"]doubleValue]]];
         //        
-        cell.imageMain.imageURL = [NSURL URLWithString:[[[[arrayNearBy objectAtIndex:indexPath.row]objectForKey:FIELDIMAGES]objectForKey:FIELDIMAGE]objectAtIndex:0]];
+        cell.imageMain.image  = [UIImage imageNamed:@"placeholder.jpg"] ;
+
 	}
 	
     

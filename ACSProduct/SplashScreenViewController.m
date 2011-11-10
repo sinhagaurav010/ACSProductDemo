@@ -40,26 +40,55 @@
     [self.navigationController setNavigationBarHidden:YES];
     // [self.navigationController pushViewController:tabBarController
     //                   animated:YES];
+//    
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view
+//                                              animated:YES];
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view
-                                              animated:YES];
-    hud.labelText = @"Loading...";
+    NSString *filePath	= [[NSBundle mainBundle]pathForResource:@"ACSData" ofType:@"xml"];
+	NSString *fileContents= [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    //NSLog(@"filecontents=%@",fileContents);
+	NSData  *comicVideoXmlfileData= [fileContents dataUsingEncoding:NSUTF8StringEncoding];
     
+    [self parsingFunction:comicVideoXmlfileData];
     
-    modal = [[ModalController alloc] init];
-    modal.delegate = self;
-    [modal sendTheRequestWithPostString:nil withURLString:URLDATA];
-    
+//    hud.labelText = @"Loading...";
+//    
+//    
+//    modal = [[ModalController alloc] init];
+//    modal.delegate = self;
+//    [modal sendTheRequestWithPostString:nil withURLString:URLDATA];
+//    
     [super viewDidLoad];
     
     // Do any additional setup after loading the view from its nib.
 }
+
+
 -(void)getdata
 {
     NSLog(@"ksdvfv%@",modal.stringRx);
-    NSDictionary *_xmlDictionaryData = [[XMLReader dictionaryForXMLData:modal.
-                                         dataXml error:nil] retain];
+    [self parsingFunction:modal.dataXml];
+    
+}
+
+-(void)getError
+{
+    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+    
+    [ModalController showTheAlertWithMsg:@"Error" 
+                               withTitle:@"Error in Network"
+                            inController:self];
+}
+
+
+#pragma mark -parsingFunction-
+
+-(void)parsingFunction:(NSData *)dataForParse
+{
+    NSDictionary *_xmlDictionaryData = [[XMLReader dictionaryForXMLData:dataForParse error:nil] retain];
+    
     NSLog(@"%@",_xmlDictionaryData);
+    
     [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
     if([[_xmlDictionaryData objectForKey:@"Lists"] objectForKey:@"List"])
@@ -76,16 +105,7 @@
     
     [self.navigationController pushViewController:tabBarController
                                          animated:YES];
-    
-}
 
--(void)getError
-{
-    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-    
-    [ModalController showTheAlertWithMsg:@"Error" 
-                               withTitle:@"Error in Network"
-                            inController:self];
 }
 - (void)viewDidUnload
 {
